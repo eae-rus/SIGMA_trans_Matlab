@@ -25,16 +25,16 @@ while usl
         for z=i:1:j
             if abs(F1(z)-U1(z)*naklon-J0)/F1(z) > (pogresh/100)
                 usl_vn=0;
-            end;
-        end;
+            end
+        end
         
         if j==D
             usl_vn=0;
-        end;
+        end
         if usl_vn==1
             j=j+1;
-        end;
-    end;
+        end
+    end
     
     if j<D    
     naklon=(F1(j-1) - F1(i))/(U1(j-1) - U1(i));
@@ -43,7 +43,7 @@ while usl
     sigma(2,k)=U1(j-1);
     sigma(3,k)=naklon;
     sigma(4,k)=J0;
-    end;
+    end
     if j==D
     naklon=(F1(j) - F1(i))/(U1(j) - U1(i));
     J0=F1(i)-U1(i)*naklon;        
@@ -51,14 +51,14 @@ while usl
     sigma(2,k)=U1(j);
     sigma(3,k)=naklon;
     sigma(4,k)=J0;
-    end;
+    end
     
     i=j-1;
     k=k+1;
     if j==D
        usl=0;
-    end;
-end;
+    end
+end
 sigma1=sigma;
 
 
@@ -78,16 +78,16 @@ while usl
         for z=i:1:j
             if abs(F1(z)-U2(z)*naklon-J0)/F1(z) > (pogresh/100)
                 usl_vn=0;
-            end;
-        end;
+            end
+        end
         
         if j==D
             usl_vn=0;
-        end;
+        end
         if usl_vn==1
             j=j+1;
-        end;
-    end;
+        end
+    end
     
     if j<D    
     naklon=(F1(j-1) - F1(i))/(U2(j-1) - U2(i));
@@ -96,7 +96,7 @@ while usl
     sigma(2,k)=U2(j-1);
     sigma(3,k)=naklon;
     sigma(4,k)=J0;
-    end;
+    end
     if j==D
     naklon=(F1(j) - F1(i))/(U2(j) - U2(i));
     J0=F1(i)-U2(i)*naklon;        
@@ -104,14 +104,14 @@ while usl
     sigma(2,k)=U2(j);
     sigma(3,k)=naklon;
     sigma(4,k)=J0;
-    end;
+    end
     
     i=j-1;
     k=k+1;
     if j==D
        usl=0;
-    end;
-end;
+    end
+end
 sigma2=sigma;
 
 end
